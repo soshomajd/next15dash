@@ -2,7 +2,6 @@ import { ArrowPathIcon } from '@heroicons/react/24/outline';
 import clsx from 'clsx';
 import Image from 'next/image';
 import { lustiana } from '@/app/ui/fonts';
-import { LatestInvoice } from '@/app/lib/definitions';
 import { fetchLatestInvoices } from '@/app/lib/data';
 export default async function LatestInvoices() {
 
@@ -21,7 +20,7 @@ export default async function LatestInvoices() {
           {latestInvoices.map((invoice, i) => {
             return (
               <div
-                key={invoice.id}
+                key={i}
                 className={clsx(
                   'flex flex-row items-center justify-between py-4',
                   {
